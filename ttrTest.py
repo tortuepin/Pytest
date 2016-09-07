@@ -10,9 +10,9 @@ old = termios.tcgetattr(fd)
 
 try:
     #標準入力のモードを切り替える
-    #cbreakとrawのどっちもエンターいらなくなるけど、rawはctrl-cとかもきかなくなる
-    #tty.setcbreak(sys.stdin.fileno())
-    tty.setraw(sys.stdin.fileno())
+    #cbreakとrawのどっちもエンターいらなくなるけど、rawはctrl-cとかもきかなくなる??
+    tty.setcbreak(sys.stdin.fileno())
+    #tty.setraw(sys.stdin.fileno())
     ch = sys.stdin.read(1)
     
 finally:
